@@ -1,3 +1,17 @@
-retrieved_book.delete()
-print(Book.objects.all())
-# Output: <QuerySet []>
+<<<
+---
+
+### **4️⃣ delete.md**
+
+```markdown
+# Delete the Book instance
+
+```python
+from bookshelf.models import Book
+
+book1 = Book.objects.get(title="Nineteen Eighty-Four")
+book1.delete()
+
+Book.objects.all()
+# <QuerySet []>
+
