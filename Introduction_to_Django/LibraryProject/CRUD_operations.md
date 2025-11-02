@@ -1,27 +1,33 @@
-# CRUD Operations for Book Model
-
-## 1. Create
-
-```python
+Create
 from bookshelf.models import Book
-
-# Create a Book instance
-book1 = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
-
-# Verify creation
-book1
-# Retrieve all Book objects
-Book.objects.all()
-# Update the title of the book
-book.title = "Nineteen Eighty-Four"
-book.save()
-
-# Verify update
-Book.objects.get(id=1).title
-# Delete the book
-book.delete()
-
-# Verify deletion
-Book.objects.all()
-
-
+book = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
+# Output: <Book: 1984>
+Retrieve
+retrieved_book = Book.objects.get(id=book.id)
+print(retrieved_book.title, retrieved_book.author, retrieved_book.publication_year)
+# Output: 1984 George Orwell 1949
+Update
+retrieved_book.title = "Nineteen Eighty-Four"
+retrieved_book.save()
+print(retrieved_book.title)
+# Output: Nineteen Eighty-Four
+Delete
+retrieved_book.delete()
+print(Book.objects.all())
+# Output: <QuerySet []>Create
+from bookshelf.models import Book
+book = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
+# Output: <Book: 1984>
+Retrieve
+retrieved_book = Book.objects.get(id=book.id)
+print(retrieved_book.title, retrieved_book.author, retrieved_book.publication_year)
+# Output: 1984 George Orwell 1949
+Update
+retrieved_book.title = "Nineteen Eighty-Four"
+retrieved_book.save()
+print(retrieved_book.title)
+# Output: Nineteen Eighty-Four
+Delete
+retrieved_book.delete()
+print(Book.objects.all())
+# Output: <QuerySet []>
