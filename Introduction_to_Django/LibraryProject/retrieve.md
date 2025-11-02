@@ -1,8 +1,3 @@
-# Retrieve the Book instance
-
-```python
-from bookshelf.models import Book
-
-# Retrieve all books
-Book.objects.all()
-# <QuerySet [<Book: 1984 by George Orwell (1949)>]>
+retrieved_book = Book.objects.get(id=book.id)
+print(retrieved_book.title, retrieved_book.author, retrieved_book.publication_year)
+# Output: 1984 George Orwell 1949
