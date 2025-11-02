@@ -1,9 +1,3 @@
-
----
-
-### **4️⃣ delete.md**
-
-```markdown
 # Delete the Book instance
 
 ```python

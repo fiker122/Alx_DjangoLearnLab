@@ -1,9 +1,3 @@
-
----
-
-### **3️⃣ update.md**
-
-```markdown
 # Update the Book title
 
 ```python
